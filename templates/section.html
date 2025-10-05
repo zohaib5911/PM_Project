@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>{{ section.title }}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="bg-shapes">
+    <div class="shape shape-1"></div>
+    <div class="shape shape-2"></div>
+    <div class="shape shape-3"></div>
+    <div class="shape shape-4"></div>
+  </div>
+
+  <header>
+    <a class="back-btn" href="{{ url_for('index') }}">← Home</a>
+    <h1>{{ section.title }}</h1>
+    <p class="desc">{{ section.title }}</p>
+  </header>
+
+  <main class="comparison-container">
+    <!-- Neon Table Wrapper -->
+    <div class="neon-table-wrapper">
+      <table class="neon-table">
+        <thead>
+          <tr>
+            <th>Theme</th>
+            <th>Summary</th>
+            <th>References</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for row in section.rows %}
+          <tr>
+            <td class="theme">{{ row.theme }}</td>
+            <td class="summary">{{ row.summary }}</td>
+            <td class="refs">
+              {% for r in row.refs %}
+                <a target="_blank"
+                   href="{{ url_for('reference') }}?id={{ r.id|urlencode }}&label={{ r.label|urlencode }}&theme={{ row.theme|urlencode }}&summary={{ row.summary|urlencode }}"
+                   class="reference-link">
+                   {{ r.label }}
+                </a><br>
+              {% endfor %}
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+  <footer>&copy; 2025 Project Management Standards App - Group 14</footer>
+</body>
+</html>

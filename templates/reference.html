@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Reference - {{ label }}</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"></head>
+<body>
+  <div class="bg-shapes"><div class="shape shape-1"></div><div class="shape shape-2"></div><div class="shape shape-3"></div><div class="shape shape-4"></div></div>
+  <header><a class="back-btn" href="javascript:window.history.back()">← Back</a><h1>Reference: {{ label }}</h1>{% if theme %}<p class="theme-note">Theme: {{ theme }}</p>{% endif %}</header>
+  <main class="reference-main"><div class="reference-card"><h2>Placeholder content for <span class="ref-id">{{ ref_id }}</span></h2><p>This is a simulated reference page for <strong>{{ label }}</strong>.</p>{% if summary %}<h3>Related summary</h3><p>{{ summary }}</p>{% endif %}
+    {% if open_url %}
+      <div class="actions"><a class="btn" target="_blank" href="{{ open_url }}">Open in book (PDF)</a></div>
+    {% else %}
+      <div class="note">Replace this placeholder with the real book page or uploaded PDF/HTML when available.</div>
+    {% endif %}
+  </div></main>
+  <footer>&copy; 2025 Project Management Standards App - Group 14</footer>
+</body></html>

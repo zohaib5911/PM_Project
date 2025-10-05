@@ -1,0 +1,10 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Group 14 - PM Comparison</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"></head>
+<body>
+  <div class="bg-shapes"><div class="shape shape-1"></div><div class="shape shape-2"></div><div class="shape shape-3"></div><div class="shape shape-4"></div></div>
+  <header><h1>Group 14</h1><div class="team-members"><div class="member"><span class="member-name">M. Hassan Ali</span><span class="member-id">BSCS23011</span></div><div class="member"><span class="member-name">M. Zohaib Sajjad</span><span class="member-id">BSCS23098</span></div><div class="member"><span class="member-name">Afaq Ahmad</span><span class="member-id">BSCS22080</span></div></div></header>
+  <main><h2>Choose a comparison</h2><div class="options"><a class="box" href="{{ url_for('section', name='similarities') }}">Similarities</a><a class="box" href="{{ url_for('section', name='differences') }}">Differences</a><a class="box" href="{{ url_for('section', name='unique') }}">Unique Elements</a></div></main>
+  <footer>&copy; 2025 Project Management Standards App - Group 14</footer>
+</body></html>
