@@ -69,13 +69,6 @@ Notes:
 - Consider adding a `requirements.txt` (pin Flask version) and a small test harness.
 - If you add more PDF references, place them in the `Books/` folder and use the existing label patterns so the app can discover them.
 
-## Contributors 
-
-M Zohaib Sajjad
-M Hassan Ali
-Affaq Ahmad
 
 ---
-
-If you want, I can also add a `requirements.txt`, a small test, or tweak templates to improve the UI. Tell me which next.
 # PM_Project
